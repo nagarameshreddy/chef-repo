@@ -3,19 +3,11 @@
 # Recipe:: packages
 #
 
-include_recipe 'myohai-plugins-cookbook::bash_version'
-
-log '*** In mysecurity-cookbook::packages recipe'
-
-bash 'Checking if bash is vulnerable' do
-  flags '-ex'
-  cwd '/tmp'
-  code <<-'EOH'
-    env x='() { :;}; echo vulnerable' bash -c "echo this is a test" > /tmp/bash.txt
-    bash -version >> /tmp/bash.txt
-  EOH
-end
+include_recipe 'ohai::default'
 
 log "*** Bash vulnerable: #{node['languages']['bash']['shellshock_vulnerable']}"
 
-
+package 'bash' do
+  action :upgrade
+  only_if { node['languages']['bash']['shellshock_vulnerable'] }
+end

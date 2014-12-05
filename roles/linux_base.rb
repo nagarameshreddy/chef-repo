@@ -1,4 +1,4 @@
-name "linux_base"
-description "Linux base role"
-run_list "recipe[chef-client::delete_validation]",
-         "recipe[chef-client::default]"
+name 'linux_base'
+description 'Linux base role'
+run_list 'recipe[chef-client::delete_validation]',
+         'recipe[chef-client::default]'

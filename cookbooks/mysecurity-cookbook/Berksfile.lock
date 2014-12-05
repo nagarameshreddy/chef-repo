@@ -1,0 +1,9 @@
+DEPENDENCIES
+  mysecurity-cookbook
+    path: .
+    metadata: true
+
+GRAPH
+  mysecurity-cookbook (0.1.0)
+    ohai (>= 0.0.0)
+  ohai (2.0.1)
