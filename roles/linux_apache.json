@@ -1,0 +1,20 @@
+{
+  "name": "linux_apache",
+  "description": "Linux apache role",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "chef_type": "role",
+  "run_list": [
+    "role[linux_base]",
+    "recipe[myapache-cookbook::default]",
+    "recipe[myapache-cookbook::app-checkout]"
+  ],
+  "env_run_lists": {
+
+  }
+}

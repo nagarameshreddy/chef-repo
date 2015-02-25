@@ -1,0 +1,19 @@
+{
+  "name": "windows_iis",
+  "description": "Windows webserver role based on IIS",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[myiis-cookbook::default]",
+    "recipe[myiis-cookbook::app-checkout]"
+  ],
+  "env_run_lists": {
+
+  }
+}
