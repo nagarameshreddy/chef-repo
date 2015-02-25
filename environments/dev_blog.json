@@ -2,23 +2,22 @@
   "name": "dev_blog",
   "description": "Dev blog environment",
   "cookbook_versions": {
-
   },
-  "json_class": "Chef::Environment",
-  "chef_type": "environment",
   "default_attributes": {
-
-  },
-  "override_attributes": {
     "myapache-cookbook": {
       "git-repo": "https://github.com/alexpop/myhtml-app",
       "git-revision": "master"
     },
     "myiis-cookbook": {
       "git-repo": "https://github.com/alexpop/myhtml-app",
-      "git-revision": "release-1",
+      "git-revision": "master",
       "doc-root": "c:/inetpub/wwwroot"
+    },
+    "chef_client": {
+      "interval": "3600"
     }
+  },
+  "override_attributes": {
   }
 }
 

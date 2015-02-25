@@ -42,10 +42,8 @@ suites:
     run_list:
        -role[linux_apache]
     attributes:
-      myapache-cookbook:
-        git-repo: https://github.com/alexpop/myhtml-app
-        git-revision: release-3
-        doc-root: /var/www/html
+      chef_client:
+        conf_dir: /tmp/kitchen
       data_bag:
         name: secure
         item: ssl_opschef.tv
@@ -60,10 +58,6 @@ suites:
     attributes:
       chef_client:
         conf_dir: /tmp/kitchen
-      myapache-cookbook:
-        git-repo: https://github.com/alexpop/myhtml-app
-        git-revision: release-1
-        doc-root: /var/www/html
       data_bag:
         name: secure
         item: ssl_opschef.tv
