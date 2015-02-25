@@ -41,9 +41,6 @@ suites:
         environment: test_blog
     run_list:
        -role[linux_apache]
-#      - recipe[myapache-cookbook::default]
-#      - recipe[myapache-cookbook::ssl]
-#      - recipe[myapache-cookbook::app-checkout]
     attributes:
       myapache-cookbook:
         git-repo: https://github.com/alexpop/myhtml-app
@@ -60,9 +57,6 @@ suites:
         environment: dev_blog
     run_list:
        - role[linux_apache]
-#      - recipe[myapache-cookbook::default]
-#      - recipe[myapache-cookbook::ssl]
-#      - recipe[myapache-cookbook::app-checkout]
     attributes:
       chef_client:
         conf_dir: /tmp/kitchen
