@@ -12,7 +12,7 @@
     },
     "chef_client": {
       "interval": "3600",
-      "splay": "1800"
+      "splay": "300"
     }
   },
   "override_attributes": {

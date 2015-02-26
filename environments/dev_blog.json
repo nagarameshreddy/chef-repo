@@ -14,7 +14,8 @@
       "doc-root": "c:/inetpub/wwwroot"
     },
     "chef_client": {
-      "interval": "3600"
+      "interval": "3600",
+      "splay": "300"
     }
   },
   "override_attributes": {
