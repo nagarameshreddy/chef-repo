@@ -40,14 +40,10 @@ suites:
       client_rb:
         environment: test_blog
     run_list:
-       -role[linux_apache]
+       - role[linux_base]
     attributes:
       chef_client:
         conf_dir: /tmp/kitchen
-      data_bag:
-        name: secure
-        item: ssl_opschef.tv
-        secret: superSECRETencryptionKEY
 
   - name: dev
     provisioner:
