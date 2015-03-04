@@ -2,8 +2,9 @@
   "name": "prod_blog",
   "description": "Prod blog environment",
   "cookbook_versions": {
-    "haproxy": "= 1.6.6",
-    "myapache-cookbook": "= 0.2.10"
+    "users": "= 0.1.0",
+    "pci": "= 0.1.0",
+    "apache": "= 0.4.0"
   },
   "default_attributes": {
     "myapache-cookbook": {

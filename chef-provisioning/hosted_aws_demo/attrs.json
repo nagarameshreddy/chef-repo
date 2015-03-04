@@ -1,0 +1,14 @@
+{
+  "provision":{
+    "name_prefix":"apop-demo",
+    "instances":"3",
+    "chef":{
+      "environment":"test_blog"
+    },
+    "cloud":{
+      "availability_zone":"eu-west-1a",
+      "instance_type":"t2.small",
+      "image_id":"ami-e4ff5c93"
+    }
+  }
+}
