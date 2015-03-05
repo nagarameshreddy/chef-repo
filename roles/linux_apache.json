@@ -15,6 +15,5 @@
     "recipe[myapache-cookbook::app-checkout]"
   ],
   "env_run_lists": {
-
   }
 }

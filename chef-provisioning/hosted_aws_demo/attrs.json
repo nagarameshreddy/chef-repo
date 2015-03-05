@@ -1,14 +1,18 @@
 {
   "provision":{
+    "all":"true",
     "name_prefix":"apop-demo",
-    "instances":"3",
+    "instances":"1",
     "chef":{
-      "environment":"test_blog"
+      "environment":"test_blog",
+      "run_list":"role[linux_apache]"
     },
     "cloud":{
       "availability_zone":"eu-west-1a",
       "instance_type":"t2.small",
-      "image_id":"ami-e4ff5c93"
+      "key_name":"apop",
+      "image_id":"ami-30ff5c47"
     }
   }
 }
+
