@@ -1,8 +1,8 @@
 {
   "provision":{
     "all":"true",
-    "name_prefix":"apop-demo",
-    "instances":"1",
+    "name_prefix":"apop-oven",
+    "instances":"2",
     "chef":{
       "run_list":"role[linux_apache]"
     },
@@ -15,10 +15,10 @@
     "default_attributes":{
       "myapache-cookbook":{
         "git-repo": "https://github.com/alexpop/myhtml-app",
-        "git-revision": "release-3"
+        "git-revision": "release-2"
       },
       "chef_client":{
-        "interval": "1800",
+        "interval": "3600",
         "splay": "300"
       }
     }

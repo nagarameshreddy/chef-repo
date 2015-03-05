@@ -12,7 +12,8 @@
   "run_list": [
     "role[linux_base]",
     "recipe[myapache-cookbook::default]",
-    "recipe[myapache-cookbook::app_checkout]"
+    "recipe[myapache-cookbook::app_checkout]",
+    "recipe[myapache-cookbook::audit_recipe]"
   ],
   "env_run_lists": {
   }

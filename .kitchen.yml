@@ -1,5 +1,5 @@
 # Kitche+Vagrant doc: https://github.com/test-kitchen/kitchen-vagrant/blob/master/README.md
-# .kitchen.yml doc: 
+# .kitchen.yml   doc: https://docs.chef.io/config_yml_kitchen.html 
 
 driver:
   name: vagrant
