@@ -4,7 +4,6 @@
     "name_prefix":"apop-demo",
     "instances":"1",
     "chef":{
-      "environment":"test_blog",
       "run_list":"role[linux_apache]"
     },
     "cloud":{
@@ -12,6 +11,16 @@
       "instance_type":"t2.small",
       "key_name":"apop",
       "image_id":"ami-30ff5c47"
+    },
+    "default_attributes":{
+      "myapache-cookbook":{
+        "git-repo": "https://github.com/alexpop/myhtml-app",
+        "git-revision": "release-3"
+      },
+      "chef_client":{
+        "interval": "1800",
+        "splay": "300"
+      }
     }
   }
 }

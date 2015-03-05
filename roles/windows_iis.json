@@ -11,7 +11,7 @@
   "chef_type": "role",
   "run_list": [
     "recipe[myiis-cookbook::default]",
-    "recipe[myiis-cookbook::app-checkout]"
+    "recipe[myiis-cookbook::app_checkout]"
   ],
   "env_run_lists": {
 
