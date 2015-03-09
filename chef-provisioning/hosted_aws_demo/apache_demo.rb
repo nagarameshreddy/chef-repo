@@ -49,8 +49,7 @@ machine_batch do
           :availability_zone => node['provision']['cloud']['availability_zone'],
           :instance_type => node['provision']['cloud']['instance_type'],
           :image_id => node['provision']['cloud']['image_id']
-        },
-        :image_id => node['provision']['cloud']['image_id']
+        }
       })
     end
   end

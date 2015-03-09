@@ -3,15 +3,18 @@
     "all":"true",
     "name_prefix":"apop-oven",
     "instances":"2",
+
     "chef":{
       "run_list":"role[linux_apache]"
     },
+
     "cloud":{
       "availability_zone":"eu-west-1a",
       "instance_type":"t2.small",
       "key_name":"apop",
       "image_id":"ami-30ff5c47"
     },
+
     "default_attributes":{
       "myapache-cookbook":{
         "git-repo": "https://github.com/alexpop/myhtml-app",
