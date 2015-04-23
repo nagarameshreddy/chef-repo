@@ -4,6 +4,11 @@
 driver:
   name: vagrant
 
+driver_config:
+  # I don't login often, but when I do, I do it as root
+  username: root
+  password: vagrant
+
 provisioner:
   name: chef_zero
   # Download latest stable chef-client using the install.sh script
@@ -16,7 +21,7 @@ provisioner:
   roles_path: './roles'
   environments_path: './environments'
   data_bags_path: './data_bags'
-  
+
 platforms:
   - name: centos6
     driver_config:
@@ -47,7 +52,7 @@ suites:
         conf_dir: /tmp/kitchen
       data_bag:
         name: secure
-        item: ssl_opschef.tv
+        item: ssl_opschef_tv
         secret: superSECRETencryptionKEY
 
   - name: test
@@ -60,3 +65,14 @@ suites:
       chef_client:
         conf_dir: /tmp/kitchen
 
+  - name: apache2
+    provisioner:
+      client_rb:
+        environment: test_blog
+    run_list:
+       - role[linux_apache2]
+    attributes:
+      data_bag:
+        name: secure
+        item: ssl_opschef_tv
+        secret: superSECRETencryptionKEY

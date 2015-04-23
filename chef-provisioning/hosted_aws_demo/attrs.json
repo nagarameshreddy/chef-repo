@@ -2,7 +2,7 @@
   "provision":{
     "all":"true",
     "name_prefix":"apop-oven",
-    "instances":"2",
+    "instances":"3",
 
     "chef":{
       "run_list":"role[linux_apache]"
@@ -21,7 +21,7 @@
         "git-revision": "release-2"
       },
       "chef_client":{
-        "interval": "3600",
+        "interval": "1800",
         "splay": "300"
       }
     }

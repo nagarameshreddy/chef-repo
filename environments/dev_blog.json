@@ -1,24 +1,23 @@
 {
-  "name": "dev_blog",
-  "description": "Dev blog environment",
-  "cookbook_versions": {
-  },
-  "default_attributes": {
-    "myapache-cookbook": {
-      "git-repo": "https://github.com/alexpop/myhtml-app",
-      "git-revision": "master"
+    "chef_type": "environment",
+    "cookbook_versions": {},
+    "default_attributes": {
+        "chef_client": {
+            "interval": "3600",
+            "splay": "300"
+        },
+        "myapache-cookbook": {
+            "git-repo": "https://github.com/alexpop/myhtml-app",
+            "git-revision": "master"
+        },
+        "myiis-cookbook": {
+            "doc-root": "c:/inetpub/wwwroot",
+            "git-repo": "https://github.com/alexpop/myhtml-app",
+            "git-revision": "master"
+        }
     },
-    "myiis-cookbook": {
-      "git-repo": "https://github.com/alexpop/myhtml-app",
-      "git-revision": "master",
-      "doc-root": "c:/inetpub/wwwroot"
-    },
-    "chef_client": {
-      "interval": "3600",
-      "splay": "300"
-    }
-  },
-  "override_attributes": {
-  }
+    "description": "Dev blog environment",
+    "json_class": "Chef::Environment",
+    "name": "dev_blog",
+    "override_attributes": {}
 }
-

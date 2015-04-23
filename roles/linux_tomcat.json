@@ -5,14 +5,14 @@
   "default_attributes": {
 
   },
-  "override_attributes": {
-
-  },
   "chef_type": "role",
   "run_list": [
     "recipe[tomcat::default]"
   ],
   "env_run_lists": {
 
-  }
+  },
+  "override_attributes": {
+
+}
 }

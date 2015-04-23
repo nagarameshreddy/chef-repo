@@ -1,22 +1,22 @@
 {
-  "name": "test_blog",
-  "description": "Test blog environment",
-  "cookbook_versions": {
-    "users": "= 0.1.0",
-    "pci": "= 0.1.0",
-    "apache": "= 0.4.0"
-  },
-  "default_attributes": {
-    "myapache-cookbook": {
-      "git-repo": "https://github.com/alexpop/myhtml-app",
-      "git-revision": "release-3"
+    "chef_type": "environment",
+    "cookbook_versions": {
+        "apache": "= 0.4.0",
+        "pci": "= 0.1.0",
+        "users": "= 0.1.0"
     },
-    "chef_client": {
-      "interval": "3600",
-      "splay": "300"
-    }
-  },
-  "override_attributes": {
-  }
+    "default_attributes": {
+        "chef_client": {
+            "interval": "3600",
+            "splay": "300"
+        },
+        "myapache-cookbook": {
+            "git-repo": "https://github.com/alexpop/myhtml-app",
+            "git-revision": "release-3"
+        }
+    },
+    "description": "Test blog environment",
+    "json_class": "Chef::Environment",
+    "name": "test_blog",
+    "override_attributes": {}
 }
-

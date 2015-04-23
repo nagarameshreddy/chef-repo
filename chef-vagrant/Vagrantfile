@@ -1,0 +1,29 @@
+# Requires the chef vagrant plugin. Install using: 
+# $ vagrant plugin install chef
+require 'chef'
+
+config_file = "/Users/apop/gitin/chef-repo/.chef/knife.rb"
+Chef::Config.from_file(config_file)
+
+Vagrant.configure("2") do |c|
+  c.vm.hostname = "vagrant.hosted.com"
+  c.vm.box = "opscode-centos-6.6"
+  c.vm.box_url = "https://opscode-vm-bento.s3.amazonaws.com/vagrant/virtualbox/opscode_centos-6.6_chef-provisionerless.box"
+  c.vm.network(:private_network, {:ip=>"192.168.56.40"})
+  c.vm.synced_folder ".", "/vagrant", disabled: true
+  c.vm.synced_folder "/Users/apop/chef-kits", "/mnt/share", disabled: false
+  c.vm.provider :virtualbox do |p|
+    p.customize ["modifyvm", :id, "--cpus", "1"]
+    p.customize ["modifyvm", :id, "--memory", "1024"]
+  end
+
+  c.vm.provision "chef_client" do |chef|
+    chef.chef_server_url = Chef::Config[:chef_server_url]
+    chef.log_level = ":info" # Chef::Config[:log_level]
+    chef.validation_key_path = Chef::Config[:validation_key]
+    chef.validation_client_name = Chef::Config[:validation_client_name]
+    chef.run_list = ['recipe[myapache-cookbook::sandbox]']
+    chef.delete_node = true
+    chef.delete_client = true
+  end
+end

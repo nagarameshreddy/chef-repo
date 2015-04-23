@@ -7,5 +7,8 @@ source 'https://supermarket.chef.io'
 # Dependencies have to be specified here since metadata.rb is not used
 cookbook 'git'
 cookbook 'chef-client'
+cookbook 'apache2'
+cookbook 'ssl_certificate'
 cookbook 'mydns-cookbook', path: '../mydns-cookbook'
 cookbook 'myapache-cookbook', path: '../myapache-cookbook'
+cookbook 'apache2_wrapper', path: 'cookbooks/apache2_wrapper'
