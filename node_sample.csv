@@ -1,0 +1,3 @@
+api1.prod.domain.com,prod-api,role[linux_webserver]
+api2.prod.domain.com,prod-api,role[linux_webserver]
+api1.dev.domain.com,dev-api,role[linux_webserver]

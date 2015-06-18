@@ -5,8 +5,8 @@
 objects=$1
 object=${objects/s/}
 
-if ! egrep -q "^(roles|environments)$"<<<"$objects"; then
-  echo "Usage: $0 roles|environments"
+if ! egrep -q "^(roles|environments|data_bags)$"<<<"$objects"; then
+  echo "Usage: $0 roles|environments|data_bags"
   exit 1
 fi
 

@@ -1,6 +1,6 @@
 #
 # chef-provisioning recipe to create AWS EC2 instances behind an HTTP ELB
-# Required attributes are stored in ../attrs.json
+# Required attributes are stored in ./attrs.json
 # In the json file, set node['provision']['all'] to "true" to 
 # create the environment and "false" to destroy it
 #

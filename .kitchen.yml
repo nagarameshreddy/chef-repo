@@ -33,6 +33,8 @@ platforms:
       # Use the default host-only network along the NAT one. Makes life easier
       network:
       - ["private_network", {ip: "192.168.56.47"}]
+      # Same thing without specifying the IP
+      #- ["private_network", { type: "dhcp" }]
       # Mount local /Users/apop/chef-kits folder as /mnt/share on the VM  
       synced_folders:
       - ["/Users/apop/chef-kits", "/mnt/share", "disabled: false"]
