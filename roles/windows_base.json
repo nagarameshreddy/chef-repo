@@ -13,6 +13,7 @@
   "chef_type": "role",
   "run_list": [
     "recipe[chef-client::default]",
+    "recipe[chef-client::config]",
     "recipe[windows::default]"
   ],
   "env_run_lists": {

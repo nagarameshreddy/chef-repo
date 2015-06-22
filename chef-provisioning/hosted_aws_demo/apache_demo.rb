@@ -5,6 +5,12 @@
 # create the environment and "false" to destroy it
 #
 
+# Install the driver if missing
+chef_gem 'chef-provisioning-aws' do
+  action :install
+  compile_time true
+end
+
 require 'chef/provisioning/aws_driver'
 
 # Specify the driver to be used here
