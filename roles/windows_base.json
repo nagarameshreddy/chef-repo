@@ -12,9 +12,8 @@
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[chef-client::default]",
-    "recipe[chef-client::config]",
-    "recipe[windows::default]"
+    "recipe[chef-client::task]",
+    "recipe[chef-client::config]"
   ],
   "env_run_lists": {
 
