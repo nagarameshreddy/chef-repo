@@ -1,0 +1,24 @@
+{
+  "name": "windows_base_task",
+  "description": "Windows base role with chef-client running as a scheduled task",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+    "chef_client": {
+      "task": {
+        "frequency": "minute",
+        "frequency_modifier": 15
+      }
+    }
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[chef-client::config]",
+    "recipe[chef-client::task]"
+  ],
+  "env_run_lists": {
+
+  }
+}

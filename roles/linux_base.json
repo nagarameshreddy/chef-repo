@@ -5,7 +5,10 @@
   "default_attributes": {
     "chef_client": {
       "interval": "1800",
-      "splay": "300"
+      "splay": "300",
+      "config": {
+        "audit_mode": ":enabled"
+      }
     }
   },
   "override_attributes": {
@@ -14,7 +17,8 @@
   "chef_type": "role",
   "run_list": [
     "recipe[chef-client::default]",
-    "recipe[chef-client::config]"
+    "recipe[chef-client::config]",
+    "recipe[ntp::default]"
   ],
   "env_run_lists": {
 

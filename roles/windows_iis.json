@@ -3,7 +3,7 @@
   "description": "Windows webserver role based on IIS",
   "json_class": "Chef::Role",
   "default_attributes": {
-
+     "myiis-cookbook": "GMT Standard Time"
   },
   "override_attributes": {
 
