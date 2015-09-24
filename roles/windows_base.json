@@ -7,14 +7,18 @@
   },
   "override_attributes": {
     "chef_client": {
-      "interval": "900",
-      "splay": "300"
+      "interval": "300",
+      "splay": "30",
+      "config": {
+         "audit_mode": ":enabled"
+      }
     }
   },
   "chef_type": "role",
   "run_list": [
     "recipe[chef-client::default]",
-    "recipe[chef-client::config]"
+    "recipe[chef-client::config]",
+    "recipe[mywin-cookbook::default]"
   ],
   "env_run_lists": {
 

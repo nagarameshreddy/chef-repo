@@ -37,7 +37,7 @@ platforms:
       #- ["private_network", { type: "dhcp" }]
       # Mount local /Users/apop/chef-kits folder as /mnt/share on the VM  
       synced_folders:
-      - ["/Users/apop/chef-kits", "/mnt/share", "disabled: false"]
+      - ["~/chef-kits", "/mnt/share", "disabled: false"]
       customize:
         cpus: 1
         memory: 1024

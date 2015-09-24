@@ -9,14 +9,19 @@
     "chef_client": {
       "task": {
         "frequency": "minute",
-        "frequency_modifier": 15
+        "frequency_modifier": 15,
+        "start_time": "00:01"
+      },
+      "config": {
+        "audit_mode": ":enabled"
       }
     }
   },
   "chef_type": "role",
   "run_list": [
     "recipe[chef-client::config]",
-    "recipe[chef-client::task]"
+    "recipe[chef-client::task]",
+    "recipe[mywin-cookbook::default]"
   ],
   "env_run_lists": {
 

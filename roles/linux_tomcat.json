@@ -1,13 +1,13 @@
 {
   "name": "linux_tomcat",
-  "description": "Linux tomcat role",
+  "description": "Linux tomcat role with cookbook version pin",
   "json_class": "Chef::Role",
   "default_attributes": {
 
   },
   "chef_type": "role",
   "run_list": [
-    "recipe[tomcat::default]"
+    "recipe[tomcat::default@0.17.3]"
   ],
   "env_run_lists": {
 
