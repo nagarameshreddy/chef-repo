@@ -1,0 +1,31 @@
+{
+  "name": "windows_push",
+  "description": "Windows role to install push jobs",
+  "json_class": "Chef::Role",
+  "default_attributes": {
+    "push_jobs": {
+      "package_url": "https://s3-eu-west-1.amazonaws.com/apop-bucket/push-jobs-client-1.3.3-1.msi",
+      "package_checksum": "ab59ca63186aada10e3d13886a3981d2576f8316361a65d484e7d9010e8e803a",
+      "whitelist": {
+        "chef-client": "chef-client",
+        "kv": "knife -v",
+        "date": "date > c:\\date.txt" 
+      }
+    },
+    "chef_client": {
+      "config": {
+        "verify_api_cert": false
+      }
+    }
+  },
+  "override_attributes": {
+
+  },
+  "chef_type": "role",
+  "run_list": [
+    "recipe[push-jobs::default]"
+  ],
+  "env_run_lists": {
+
+  }
+}
