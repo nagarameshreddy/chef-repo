@@ -1,4 +1,5 @@
 {
+    "name": "test_blog",
     "chef_type": "environment",
     "cookbook_versions": {
         "apache": "= 0.4.0",
@@ -12,11 +13,20 @@
         },
         "myapache-cookbook": {
             "git-repo": "https://github.com/alexpop/myhtml-app",
-            "git-revision": "release-3"
+            "git-revision": "release-1"
+        },
+        "audit": {
+            "profiles": {
+              "base/ssh": true,
+              "base/linux": true
+            }
+        }
+    },
+    "override_attributes": {
+       "something": {
+            "else": "value"
         }
     },
     "description": "Test blog environment",
-    "json_class": "Chef::Environment",
-    "name": "test_blog",
-    "override_attributes": {}
+    "json_class": "Chef::Environment"
 }

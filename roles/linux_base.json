@@ -4,8 +4,8 @@
   "json_class": "Chef::Role",
   "default_attributes": {
     "chef_client": {
-      "interval": "900",
-      "splay": "150",
+      "interval": "300",
+      "splay": "50",
       "config": {
         "audit_mode": ":enabled"
       }
@@ -18,7 +18,8 @@
   "run_list": [
     "recipe[chef-client::default]",
     "recipe[chef-client::config]",
-    "recipe[ntp::default]"
+    "recipe[ntp::default]",
+    "recipe[myapache-cookbook::reason]"
   ],
   "env_run_lists": {
 

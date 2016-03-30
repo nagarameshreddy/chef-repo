@@ -4,8 +4,13 @@
   "json_class": "Chef::Role",
   "default_attributes": {
     "push_jobs": {
-      "package_url": "https://opscode-private-chef.s3.amazonaws.com/windows/2008r2/x86_64/opscode-push-jobs-client-windows-1.1.5-1.windows.msi",
-      "package_checksum": "411520e6a2e3038cd018ffacee0e76e37e7badd1aa84de03f5469c19e8d6c576"
+      "package_url": "https://s3-eu-west-1.amazonaws.com/apop-bucket/push-jobs-client-1.3.3-1.msi",
+      "package_checksum": "ab59ca63186aada10e3d13886a3981d2576f8316361a65d484e7d9010e8e803a",
+      "whitelist": {
+        "chef-client": "chef-client",
+        "kv": "knife -v",
+        "date": "date > c:\\date.txt" 
+      }
     },
     "chef_client": {
       "config": {

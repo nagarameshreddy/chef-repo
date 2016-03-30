@@ -10,10 +10,8 @@
   },
   "chef_type": "role",
   "run_list": [
-    "role[linux_base]",
     "recipe[myapache-cookbook::default]",
-    "recipe[myapache-cookbook::app_checkout]",
-    "recipe[myapache-cookbook::audit_recipe]"
+    "recipe[myapache-cookbook::app_checkout]"
   ],
   "env_run_lists": {
   }

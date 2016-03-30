@@ -13,7 +13,7 @@
         "myiis-cookbook": {
             "doc-root": "c:/inetpub/wwwroot",
             "git-repo": "https://github.com/alexpop/myhtml-app",
-            "git-revision": "master"
+            "git-revision": "release-1"
         }
     },
     "description": "Dev blog environment",
